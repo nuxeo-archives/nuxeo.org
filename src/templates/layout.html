@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Nuxeo Community Center</title>
-
+  {% block meta %}{% endblock %}
   <!-- for iPhone users -->
   <meta name="apple-mobile-web-app-capable" content="yes"/>
   <link rel="apple-touch-icon" href="/media/icons/iphone-icon.png"/>
@@ -28,7 +28,7 @@
     $(document).ready(function() {
       $(".tweet").tweet({
         username: ["sfermigier", "ebarroca", "ogrisel", "efge", "janezupan", "nuxeo", "nuxeodam",
-          "arussel", "jcarsique", "rolandbenedetti"],
+          "ldoguin", "jcarsique", "viodek", "ThibArg"],
         join_text: "auto",
         avatar_size: 32,
         count: 6,
@@ -103,33 +103,34 @@
     <div class="subscribe">
       <h3>Join the Conversation</h3>
 
+    <div class="subscribe">
+      <h3>Join the Conversation</h3>
       <div class="list social">
         <ul>
           <li>
-            <a rel="nofollow" target="_blank" href="/rss"
-               onclick="_gaq.push(['_trackEvent', 'Social', 'RSS', 'Go to RSS subscription'])">
-              <img src="/media/icons/rss.png" alt="Subscribe to Feed"/>
-              <span class="count">1746 subscribers</span><br/>
-              <span class="cta">Subscribe via RSS</span></a>
+            <a onclick="_gaq.push(['_trackEvent', 'Social', 'GPlus', 'Go to GPlus page'])" href="https://plus.google.com/116828675873127390558" target="_blank" rel="nofollow">
+              <img alt="Join the Nuxeo page on Google +" src="/media/icons/gplus_32.png">
+              <span class="cta">Join the Nuxeo page on Google +</span></a>
           </li>
           <li>
-            <a rel="nofollow" target="_blank" href="http://twitter.com/nuxeo"
-               onclick="_gaq.push(['_trackEvent', 'Social', 'Twitter', 'Go to Twitter page'])">
-              <img src="/media/icons/twitter.png" alt="Follow @nuxeo on Twitter"/>
-              <span class="count"><span id="followers"></span> followers</span><br/>
+            <a onclick="_gaq.push(['_trackEvent', 'Social', 'Facebook', 'Go to Facebook page'])" href="https://www.facebook.com/Nuxeo" target="_blank" rel="nofollow">
+              <img alt="Join the Nuxeo page on Facebook" src="/media/icons/facebook_32.png">
+              <span class="cta">Join the Nuxeo page on Facebook</span></a>
+          </li>
+          <li>
+            <a onclick="_gaq.push(['_trackEvent', 'Social', 'Twitter', 'Go to Twitter page'])" href="http://twitter.com/nuxeo" target="_blank" rel="nofollow">
+              <img alt="Follow @nuxeo on Twitter" src="/media/icons/twitter_32.png">
               <span class="cta">Follow @nuxeo on Twitter</span></a>
           </li>
           <li>
-            <a rel="nofollow" target="_blank"
-               onclick="_gaq.push(['_trackEvent', 'Social', 'LinkedIn', 'Go to LinkedIn group page'])"
-               href="http://www.linkedin.com/groupsDirectory?itemaction=mclk&amp;anetid=43314&amp;impid=&amp;pgkey=anet_search_results&amp;actpref=anetsrch_name&amp;trk=anetsrch_name&amp;goback=%2Egdr_1288215250735_1">
-              <img src="/media/icons/linkedin.png" alt="Nuxeo LinkedIn"/>
-              <span class="count">568 members</span><br/>
+            <a href="http://www.linkedin.com/groups/Nuxeo-Community-43314?gid=43314&mostPopular=&trk=tyah" onclick="_gaq.push(['_trackEvent', 'Social', 'LinkedIn', 'Go to LinkedIn group page'])" target="_blank" rel="nofollow">
+              <img alt="Nuxeo LinkedIn" src="/media/icons/linkedin_32.png">
               <span class="cta">Join the Nuxeo group on LinkedIn</span></a>
           </li>
         </ul>
       </div>
     </div>
+
 
     <div class="downloads">
       <h3>Modules for the Nuxeo Platform</h3>

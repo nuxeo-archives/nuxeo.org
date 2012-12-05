@@ -8,11 +8,11 @@
       intro_text: null,                       // [string]   do you want text BEFORE your your tweets?
       outro_text: null,                       // [string]   do you want text AFTER your tweets?
       join_text:  null,                       // [string]   optional text in between date and tweet, try setting to "auto"
-      auto_join_text_default: "i said,",      // [string]   auto text for non verb: "i said" bullocks
-      auto_join_text_ed: "i",                 // [string]   auto text for past tense: "i" surfed
-      auto_join_text_ing: "i am",             // [string]   auto tense for present tense: "i was" surfing
-      auto_join_text_reply: "i replied to",   // [string]   auto tense for replies: "i replied to" @someone "with"
-      auto_join_text_url: "i was looking at", // [string]   auto tense for urls: "i was looking at" http:...
+      auto_join_text_default: " ",      // [string]   auto text for non verb: "i said" bullocks
+      auto_join_text_ed: " ",                 // [string]   auto text for past tense: "i" surfed
+      auto_join_text_ing: " ",             // [string]   auto tense for present tense: "i was" surfing
+      auto_join_text_reply: " ",   // [string]   auto tense for replies: "i replied to" @someone "with"
+      auto_join_text_url: " ", // [string]   auto tense for urls: "i was looking at" http:...
       loading_text: null,                     // [string]   optional loading text, displayed while tweets load
       query: null                             // [string]   optional search query
     };
@@ -132,7 +132,7 @@
           var text = '<span class="tweet_text">' +$([item.text]).linkUrl().linkUser().linkHash().makeHeart().capAwesome().capEpic()[0]+ '</span>';
           
           // until we create a template option, arrange the items below to alter a tweet's display.
-          list.append('<li>' + avatar + date + join + text + '</li>');
+          list.append('<li>' + avatar + join + text + '</li>');
 
           list.children('li:first').addClass('tweet_first');
           list.children('li:odd').addClass('tweet_even');
